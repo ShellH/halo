@@ -1,12 +1,13 @@
 package com.shell.halo;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.shell.halo.ui.base.FAcitivty;
 
-public class StartupActivity extends Activity {
+
+public class StartupActivity extends FAcitivty {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
