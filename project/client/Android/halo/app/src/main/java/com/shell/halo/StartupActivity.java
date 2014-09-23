@@ -23,10 +23,17 @@ public class StartupActivity extends WActivity {
     }
 
     private void startup() {
-        new Controller().setup();
+        new Controller().setup(this);
+        finish();
     }
 
-//    @Override
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(0, 0);
+    }
+
+    //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
 //        // Inflate the menu; this adds items to the action bar if it is present.
 //        getMenuInflater().inflate(R.menu.startup, menu);

@@ -17,4 +17,13 @@ public class HaloApp extends Application {
     private void init() {
         // TODO setup foundation works
     }
+
+    public WActivity getCurrentActivity() {
+        return mCurrentActivity;
+    }
+
+    public void setCurrentActivity(WActivity activity) {
+        mCurrentActivity = activity;
+    }
+
 }
