@@ -1,4 +1,4 @@
-package com.shell.halo.ui.base;
+package com.shell.halo.app.ui.base;
 
 import android.app.Activity;
 

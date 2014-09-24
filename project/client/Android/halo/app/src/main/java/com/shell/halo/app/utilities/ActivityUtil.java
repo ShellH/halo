@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.shell.halo.app.HaloApp;
-import com.shell.halo.ui.base.WActivity;
+import com.shell.halo.app.ui.base.WActivity;
 
 public class ActivityUtil {
 

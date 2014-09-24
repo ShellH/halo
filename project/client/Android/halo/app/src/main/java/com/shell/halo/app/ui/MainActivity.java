@@ -1,4 +1,4 @@
-package com.shell.halo.ui;
+package com.shell.halo.app.ui;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.shell.halo.R;
-import com.shell.halo.ui.base.WActivity;
+import com.shell.halo.app.ui.base.WActivity;
 
 public class MainActivity extends WActivity {
 

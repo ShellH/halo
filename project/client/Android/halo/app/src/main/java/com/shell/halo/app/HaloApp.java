@@ -2,7 +2,7 @@ package com.shell.halo.app;
 
 import android.app.Application;
 
-import com.shell.halo.ui.base.WActivity;
+import com.shell.halo.app.ui.base.WActivity;
 
 public class HaloApp extends Application {
 
@@ -12,6 +12,12 @@ public class HaloApp extends Application {
     public void onCreate() {
         super.onCreate();
         init();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        // mController.onLowMemory();
     }
 
     private void init() {

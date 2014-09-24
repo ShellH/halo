@@ -1,12 +1,12 @@
 package com.shell.halo;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
+import com.shell.halo.app.control.AbstractController;
+import com.shell.halo.app.control.ControllerHolder;
 import com.shell.halo.app.utilities.ThreadUtil;
-import com.shell.halo.control.Controller;
-import com.shell.halo.ui.base.WActivity;
+import com.shell.halo.app.control.Controller;
+import com.shell.halo.app.ui.base.WActivity;
 
 
 public class StartupActivity extends WActivity {
@@ -23,7 +23,7 @@ public class StartupActivity extends WActivity {
     }
 
     private void startup() {
-        new Controller().setup(this);
+        Controller.class.cast(ControllerHolder.getController(AbstractController.Type.C_MAIN)).setup(this);
         finish();
     }
 

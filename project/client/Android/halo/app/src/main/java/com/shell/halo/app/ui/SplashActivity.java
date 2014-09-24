@@ -1,6 +1,6 @@
-package com.shell.halo.ui;
+package com.shell.halo.app.ui;
 
-import com.shell.halo.ui.base.WActivity;
+import com.shell.halo.app.ui.base.WActivity;
 
 /**
  * Created by xiehao on 14-9-22.
