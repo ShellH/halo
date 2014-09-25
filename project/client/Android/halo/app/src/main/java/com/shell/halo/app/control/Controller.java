@@ -1,7 +1,6 @@
 package com.shell.halo.app.control;
 
-import com.shell.halo.app.debug.Trace;
-import com.shell.halo.app.ui.MainActivity;
+import com.shell.halo.app.ui.LoginActivity;
 import com.shell.halo.app.ui.base.WActivity;
 import com.shell.halo.app.utilities.ActivityUtil;
 
@@ -21,8 +20,8 @@ public final class Controller extends AbstractController{
     }
 
     public void setup(WActivity activity) {
-        Trace.Log(this, "xiehao setup");
         mActivity = activity;
-        ActivityUtil.jump(mActivity, MainActivity.class);
+//        ActivityUtil.jump(mActivity, MainActivity.class);
+        ActivityUtil.jump(mActivity, LoginActivity.class);
     }
 }

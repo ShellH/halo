@@ -15,7 +15,10 @@ public class WActivity extends Activity {
     }
 
     protected void init() {
-        setContentView(getLayoutResId());
+        int resId = getLayoutResId();
+        if (resId > 0) {
+            setContentView(resId);
+        }
         ThreadUtil.runAsync(new Runnable() {
             @Override
             public void run() {

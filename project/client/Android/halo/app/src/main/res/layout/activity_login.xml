@@ -30,10 +30,28 @@
         android:layout_alignParentRight="true"
         android:textColor="@color/text_blue"
         android:textSize="@dimen/text_size_14sp"
-        android:text="@string/login"/>
+        android:text="@string/login"
+        android:onClick="onClick"/>
     <Button
         android:id="@+id/act_login_register"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/act_login_input_password"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/text_size_14sp"
+        android:text="@string/register"
+        android:onClick="onClick"/>
+    <TextView
+        android:id="@+id/act_login_forget_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/act_login_input_password"
+        android:layout_toLeftOf="@id/act_login_login"
+        android:layout_marginTop="@dimen/interval_10dp"
+        android:layout_marginRight="@dimen/interval_10dp"
+        android:text="@string/forget_password"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/text_size_12sp"
+        android:onClick="onClick"/>
 
 </RelativeLayout>

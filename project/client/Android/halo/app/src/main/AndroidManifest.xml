@@ -28,6 +28,12 @@
             android:launchMode="singleTop">
         </activity>
 
+        <activity
+            android:name=".app.ui.LoginActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
     </application>
 
 </manifest>
