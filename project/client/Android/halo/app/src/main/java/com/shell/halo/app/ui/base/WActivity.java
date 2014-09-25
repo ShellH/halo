@@ -3,10 +3,15 @@ package com.shell.halo.app.ui.base;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.shell.halo.app.control.AbstractController;
+import com.shell.halo.app.control.AppEvent;
+import com.shell.halo.app.control.EventDispatcher;
 import com.shell.halo.app.utilities.ActivityUtil;
 import com.shell.halo.app.utilities.ThreadUtil;
 
-public class WActivity extends Activity {
+public abstract class WActivity extends Activity {
+
+    private EventDispatcher mEventDispatcher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +27,32 @@ public class WActivity extends Activity {
         ThreadUtil.runAsync(new Runnable() {
             @Override
             public void run() {
+                AbstractController.Type type = getControllerType();
+                if (null != type) {
+                    mEventDispatcher = new EventDispatcher(getControllerType());
+                }
                 asyncInit();
             }
         });
     }
 
-    protected void asyncInit() {}
+    protected void asyncInit() {
+
+    }
 
     protected int getLayoutResId() {
         return 0;
+    }
+
+    protected AbstractController.Type getControllerType() {
+        return null;
+    }
+
+    protected void postEvent(AppEvent event) {
+        if (null == mEventDispatcher) {
+            throw new RuntimeException("[" + this.getClass().getName() + "] Override getControllerType before postEvent.");
+        }
+        mEventDispatcher.postUIEvent(event);
     }
 
     @Override

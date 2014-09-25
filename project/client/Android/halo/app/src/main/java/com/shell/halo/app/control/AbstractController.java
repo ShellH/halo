@@ -1,6 +1,9 @@
 package com.shell.halo.app.control;
 
-public class AbstractController {
+public abstract class AbstractController {
+
+    private AbstractController mParent;
+
     public static enum Type {
         C_MAIN,
         C_STARTUP_M,
@@ -17,4 +20,9 @@ public class AbstractController {
     public Type getType() {
         return mType;
     }
+
+    public boolean handleUIEvent(AppEvent event) {
+        return mParent.handleUIEvent(event);
+    }
+
 }
