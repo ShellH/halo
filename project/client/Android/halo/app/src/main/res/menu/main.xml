@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".StartupActivity" >
+
+    <item android:id="@+id/action_qrcode"
+        android:title="@string/qrcode"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+    <item android:id="@+id/action_settings"
+        android:title="@string/settings"
+        android:orderInCategory="200"
+        android:showAsAction="never" />
+</menu>

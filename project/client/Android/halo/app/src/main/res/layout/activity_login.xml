@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/act_login_input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/interval_8dp"
+        android:hint="@string/login_username_hint"
+        android:textSize="@dimen/text_size_16sp"
+        android:textColor="@color/text_gray"/>
+    <EditText
+        android:id="@+id/act_login_input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/act_login_input_name"
+        android:layout_marginTop="@dimen/interval_4dp"
+        android:password="true"
+        android:hint="@string/login_password_hint"
+        android:textSize="@dimen/text_size_16sp"
+        android:textColor="@color/text_gray"/>
+    <Button
+        android:id="@+id/act_login_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/act_login_input_password"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/text_size_14sp"
+        android:text="@string/login"/>
+    <Button
+        android:id="@+id/act_login_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
