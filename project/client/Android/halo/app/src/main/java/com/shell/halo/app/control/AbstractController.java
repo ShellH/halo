@@ -25,7 +25,7 @@ public abstract class AbstractController {
     }
 
     protected boolean postEvent(AppEvent event) {
-        return false;
+        return mEventDispatcher.postEvent(event);
     }
 
     public boolean handleUIEvent(AppEvent event) {

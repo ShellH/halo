@@ -9,10 +9,4 @@ public class StartupActivity extends WActivity {
     protected void onInitialize() {
         postEvent(new AppEvent.Builder(UIEvent.UI_EVENT_startup).build());
     }
-
-    @Override
-    public void finish() {
-        super.finish();
-        overridePendingTransition(0, 0);
-    }
 }

@@ -56,4 +56,11 @@ public abstract class WActivity extends Activity {
         super.onPause();
         ActivityUtil.clearCurrentActivity(this);
     }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(0, 0);
+    }
+
 }

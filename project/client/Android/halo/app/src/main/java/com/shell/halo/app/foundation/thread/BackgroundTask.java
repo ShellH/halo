@@ -6,9 +6,6 @@ public abstract class BackgroundTask<Param, Result> implements Runnable{
 
     @Override
     public void run() {
-        if (ThreadUtil.isInMainThread()) {
-            throw new RuntimeException("[" + this + "] run should run in background thread.");
-        }
         final Result result = doInBackground(mParams);
         ThreadUtil.runInMainThread(new Runnable() {
             @Override

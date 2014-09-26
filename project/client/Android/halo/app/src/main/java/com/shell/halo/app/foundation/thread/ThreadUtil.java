@@ -3,8 +3,6 @@ package com.shell.halo.app.foundation.thread;
 import android.os.*;
 import android.os.Process;
 
-import java.util.HashMap;
-
 public class ThreadUtil {
 
     public enum ThreadEnum {
