@@ -26,6 +26,9 @@ public class ControllerHolder {
             case C_MAIN:
                 c = new Controller(type);
                 break;
+            case C_STARTUP_M:
+                c = new StartupManager(type);
+                break;
             default:
                 c = null;
                 break;

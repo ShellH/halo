@@ -7,7 +7,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.shell.halo.R;
-import com.shell.halo.app.control.AbstractController;
 import com.shell.halo.app.ui.base.WActivity;
 
 public class MainActivity extends WActivity {
@@ -18,11 +17,6 @@ public class MainActivity extends WActivity {
     @Override
     protected int getLayoutResId() {
         return R.layout.activity_main;
-    }
-
-    @Override
-    protected AbstractController.Type getControllerType() {
-        return AbstractController.Type.C_MAIN;
     }
 
     @Override

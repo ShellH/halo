@@ -2,15 +2,16 @@ package com.shell.halo.app.control;
 
 public abstract class AbstractController {
 
-    private AbstractController mParent;
-
     public static enum Type {
         C_MAIN,
         C_STARTUP_M,
+        C_LOGIN_M,
         C_MODULE_M,
         C_VIEW_M,
     }
 
+    private AbstractController mParent;
+    private static EventDispatcher mEventDispatcher = new EventDispatcher();
     private Type mType;
 
     AbstractController(Type type) {
@@ -21,8 +22,16 @@ public abstract class AbstractController {
         return mType;
     }
 
+    protected boolean postEvent(AppEvent event) {
+        return false;
+    }
+
     public boolean handleUIEvent(AppEvent event) {
-        return mParent.handleUIEvent(event);
+        return false;
+    }
+
+    public boolean handleEvent(AppEvent event) {
+        return false;
     }
 
 }

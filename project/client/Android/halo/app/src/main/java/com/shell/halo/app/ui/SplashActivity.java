@@ -1,6 +1,5 @@
 package com.shell.halo.app.ui;
 
-import com.shell.halo.app.control.AbstractController;
 import com.shell.halo.app.ui.base.WActivity;
 
 public class SplashActivity extends WActivity {
@@ -9,8 +8,4 @@ public class SplashActivity extends WActivity {
         return 0;
     }
 
-    @Override
-    protected AbstractController.Type getControllerType() {
-        return null;
-    }
 }

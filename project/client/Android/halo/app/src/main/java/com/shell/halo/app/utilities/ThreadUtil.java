@@ -1,12 +1,11 @@
 package com.shell.halo.app.utilities;
 
-import android.os.Handler;
-import android.os.Looper;
+import android.os.*;
+import android.os.Process;
 
-/**
- * Created by xiehao on 14-9-22.
- */
 public class ThreadUtil {
+
+    // main thread
     private static final Handler sHandler = new Handler(Looper.getMainLooper());
 
     public static boolean isInMainThread() {
@@ -28,4 +27,35 @@ public class ThreadUtil {
         }
         runAsync(runnable);
     }
+
+    // working thread
+    private static class WorkingThread {
+        private static final String NAME = "working_thread";
+        private static HandlerThread sHandlerThread = new HandlerThread(NAME, Process.THREAD_PRIORITY_BACKGROUND);
+        private static Handler sHandler;
+        static {
+            sHandlerThread.start();
+            sHandler = new Handler(sHandlerThread.getLooper());
+        }
+    }
+
+    public static void runInWorkingThread(Runnable runnable, long delay) {
+        WorkingThread.sHandler.postDelayed(runnable, delay);
+    }
+
+    // DB thread
+    private static class DBThread {
+        private static final String NAME = "database_thread";
+        private static HandlerThread sHandlerThread = new HandlerThread(NAME, Process.THREAD_PRIORITY_BACKGROUND);
+        private static Handler sHandler;
+        static {
+            sHandlerThread.start();
+            sHandler = new Handler(sHandlerThread.getLooper());
+        }
+    }
+
+    public static void runInDBThread(Runnable runnable, long delay) {
+        DBThread.sHandler.postDelayed(runnable, delay);
+    }
+
 }

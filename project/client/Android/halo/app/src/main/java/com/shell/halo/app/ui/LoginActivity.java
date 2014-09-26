@@ -6,7 +6,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.shell.halo.R;
-import com.shell.halo.app.control.AbstractController;
 import com.shell.halo.app.control.AppEvent;
 import com.shell.halo.app.ui.base.WActivity;
 
@@ -18,11 +17,6 @@ public class LoginActivity extends WActivity {
     @Override
     protected int getLayoutResId() {
         return R.layout.activity_login;
-    }
-
-    @Override
-    protected AbstractController.Type getControllerType() {
-        return AbstractController.Type.C_MAIN;
     }
 
     @Override

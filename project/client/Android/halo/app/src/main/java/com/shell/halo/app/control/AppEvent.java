@@ -1,9 +1,21 @@
 package com.shell.halo.app.control;
 
 public class AppEvent {
-    public static final int EVENT_LOGIN = 1;
+    public static final int STARTUP = 1;
+    public static final int EVENT_LOGIN = 2;
+
+    public static final int STARTUP_DONE = 2001;
+    public static final int LOGIN_DONE = 2002;
+
+    public Object from;
+    public int what;
+    public int arg1;
+    public int arg2;
+    public String str;
+    public Object obj;
 
     public AppEvent(Builder builder) {
+        this.from = builder.from;
         this.what = builder.what;
         this.arg1 = builder.arg1;
         this.arg2 = builder.arg2;
@@ -11,13 +23,8 @@ public class AppEvent {
         this.obj = builder.obj;
     }
 
-    public int what;
-    public int arg1;
-    public int arg2;
-    public String str;
-    public Object obj;
-
     public static class Builder {
+        private Object from;
         private int what;
         private int arg1;
         private int arg2;
@@ -28,13 +35,18 @@ public class AppEvent {
             this.what = what;
         }
 
+        public Builder setFrom(Object from) {
+            this.from = from;
+            return this;
+        }
+
         public Builder setArg1(int arg) {
             this.arg1 = arg;
             return this;
         }
 
         public Builder setArg2(int arg) {
-            this.arg1 = arg;
+            this.arg2 = arg;
             return this;
         }
 
