@@ -6,7 +6,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.shell.halo.R;
-import com.shell.halo.app.control.AppEvent;
+import com.shell.halo.app.control.event.AppEvent;
+import com.shell.halo.app.control.event.UIEvent;
 import com.shell.halo.app.ui.base.WActivity;
 
 public class LoginActivity extends WActivity {
@@ -49,6 +50,6 @@ public class LoginActivity extends WActivity {
     }
 
     private void doLogin(String name, String password) {
-        postEvent((new AppEvent.Builder(AppEvent.EVENT_LOGIN)).setStr(name).setObj(password).build());
+        postEvent((new AppEvent.Builder(UIEvent.UI_EVENT_login)).setStr(name).setObj(password).build());
     }
 }

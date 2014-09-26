@@ -1,5 +1,7 @@
 package com.shell.halo.app.control;
 
+import com.shell.halo.app.control.event.AppEvent;
+
 public class EventDispatcher {
 
     private AbstractController.Type mType;

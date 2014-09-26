@@ -1,7 +1,7 @@
 package com.shell.halo.app.control.state;
 
 import com.shell.halo.app.control.AbstractController;
-import com.shell.halo.app.control.AppEvent;
+import com.shell.halo.app.control.event.AppEvent;
 
 public class StateLogin extends State {
 

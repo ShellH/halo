@@ -1,4 +1,4 @@
-package com.shell.halo.app.control;
+package com.shell.halo.app.control.event;
 
 public class AppEvent {
     public static final int STARTUP = 1;
@@ -8,7 +8,7 @@ public class AppEvent {
     public static final int LOGIN_DONE = 2002;
 
     public Object from;
-    public int what;
+    public IEvent what;
     public int arg1;
     public int arg2;
     public String str;
@@ -25,13 +25,13 @@ public class AppEvent {
 
     public static class Builder {
         private Object from;
-        private int what;
+        private IEvent what;
         private int arg1;
         private int arg2;
         private String str;
         private Object obj;
 
-        public Builder(int what) {
+        public Builder(IEvent what) {
             this.what = what;
         }
 

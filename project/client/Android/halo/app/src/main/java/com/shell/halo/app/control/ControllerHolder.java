@@ -16,6 +16,10 @@ public class ControllerHolder {
         return c;
     }
 
+    static void releaseController(AbstractController.Type type) {
+        Holder.mControllers.remove(type.ordinal());
+    }
+
     private synchronized static AbstractController create(AbstractController.Type type) {
         AbstractController c = Holder.mControllers.get(type.ordinal());
         if (null != c) {
@@ -24,10 +28,13 @@ public class ControllerHolder {
 
         switch (type) {
             case C_MAIN:
-                c = new Controller(type);
+                c = new Controller();
                 break;
             case C_STARTUP_M:
-                c = new StartupManager(type);
+                c = new StartupManager();
+                break;
+            case C_VIEW_M:
+                c = new ViewManager();
                 break;
             default:
                 c = null;

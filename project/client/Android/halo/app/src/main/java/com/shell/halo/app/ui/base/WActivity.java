@@ -3,10 +3,10 @@ package com.shell.halo.app.ui.base;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.shell.halo.app.control.AppEvent;
+import com.shell.halo.app.control.event.AppEvent;
 import com.shell.halo.app.control.EventDispatcher;
 import com.shell.halo.app.utilities.ActivityUtil;
-import com.shell.halo.app.utilities.ThreadUtil;
+import com.shell.halo.app.foundation.thread.ThreadUtil;
 
 public abstract class WActivity extends Activity {
 

@@ -1,5 +1,7 @@
 package com.shell.halo.app.control;
 
+import com.shell.halo.app.control.event.AppEvent;
+
 public abstract class AbstractController {
 
     public static enum Type {

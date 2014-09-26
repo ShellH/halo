@@ -1,4 +1,4 @@
-package com.shell.halo.app.debug;
+package com.shell.halo.app.foundation.debug;
 
 import android.util.Log;
 
